@@ -1,7 +1,7 @@
 import numpy as np
 
 def Simpson(
-        f: function,
+        f: np.vectorize,
         a: float,
         b: float,
         n: int
@@ -13,7 +13,7 @@ def Simpson(
     Parameters
     --------------
     f:
-        The function to be integrated.
+        The function to be integrated (function).
     a: 
         The lower limit of the integration interval (float).
     b: 
@@ -62,5 +62,5 @@ a = 0
 b = 2
 n = 100
 
-print(Simpson(a, b, n))
+print(Simpson(f, a, b, n))
 print((b**3)/3)

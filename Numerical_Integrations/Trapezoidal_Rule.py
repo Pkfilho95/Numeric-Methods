@@ -1,7 +1,7 @@
 import numpy as np
 
 def Trapezoidal(
-        f: function,
+        f: np.vectorize,
         a: float,
         b: float,
         n: int
@@ -13,7 +13,7 @@ def Trapezoidal(
     Parameters
     --------------
     f:
-        The function to be integrated.
+        The function to be integrated (function).
     a: 
         The lower limit of the integration interval (float).
     b: 
