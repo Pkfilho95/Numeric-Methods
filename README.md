@@ -9,7 +9,6 @@ The repository includes implementations of numerical methods for solving problem
 - Numerical integration using techniques like the trapezoidal rule and Simpson's rule.
 - Solving ordinary differential equations (ODEs) using methods like Euler's method and the Runge-Kutta family of methods.
 - Root-finding methods like the bisection method, Newton-Raphson method, and the Secant method.
-- Data visualization using Matplotlib to visualize results and gain insights.
 
 ## Dependencies
 
