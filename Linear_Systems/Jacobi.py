@@ -1,12 +1,6 @@
 import numpy as np
 
-class ConvergenceError(Exception):
-    """
-    Custom exception to indicate failure of the iterative method to converge.
-    """
-    pass
-
-def Jacobi(
+def jacobi(
         A: np.ndarray | list[list[int | float]],
         B: np.ndarray | list[int | float] | list[list[int | float]],
         x: np.ndarray | list[int | float] = None,
@@ -77,7 +71,7 @@ def Jacobi(
     
     # Check the convergence
     if iteration == max_iter and error > tolerance:
-        raise ConvergenceError("It did not converge.")
+        raise Exception("It did not converge.")
     
     return x[:,1], iteration, error
 
@@ -89,4 +83,4 @@ tolerance = 5e-3
 max_iter = 100
 
 # expect [-1.,  2., -3.], 10, 3.8e-3)
-print(Jacobi(A, B, x, tolerance, max_iter))
+print(jacobi(A, B, x, tolerance, max_iter))

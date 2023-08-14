@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def Runge_Kutta(
+def runge_kutta(
         f: np.vectorize,
         x0: float,
         y0: float,
@@ -30,6 +30,22 @@ def Runge_Kutta(
     Tuple containing the x and y values of the approximate solution.
     """
 
+    try:
+        x0 = float(x0)
+        y0 = float(y0)
+    except:
+        raise TypeError("The initial values must be float types.")
+    
+    try:
+        h = float(h)
+    except:
+        raise TypeError("The step size must be float type.")
+    
+    try:
+        stop = float(stop)
+    except:
+        raise TypeError("The stopping point must be float type.")
+
     # Values of x and y
     x = [x0]
     y = [y0]
@@ -55,7 +71,7 @@ y0 = 1
 h = 0.1
 stop = 2
 
-x,y = Runge_Kutta(f, x0, y0, h, stop)
+x,y = runge_kutta(f, x0, y0, h, stop)
 
 # Exact solution
 exact_solution = lambda x: 1 - x**2

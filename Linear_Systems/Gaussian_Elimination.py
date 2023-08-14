@@ -1,6 +1,6 @@
 import numpy as np
 
-def Gaussian(
+def gaussian(
         A: np.ndarray | list[list[int | float]],
         B: np.ndarray | list[int | float] | list[list[int | float]]
     ) -> tuple[np.ndarray, np.ndarray]:
@@ -91,7 +91,7 @@ def solve(
 A = [[3,2,4],[1,1,2],[4,3,-2]]
 B = [1,2,3]
 
-A,B = Gaussian(A,B)
+A,B = gaussian(A,B)
 
 # expected output [-3. 5. 0.]
 print(solve(A,B))   

@@ -1,6 +1,6 @@
 import numpy as np
 
-def LU(
+def lu(
         A: np.ndarray | list[list[int | float]]
     ) -> np.ndarray:
     
@@ -94,7 +94,7 @@ def solve(
 A = [[3,2,4],[1,1,2],[4,3,-2]]
 B = [1,2,3]
 
-L,U = LU(A)
+L,U = lu(A)
 
 # expected output [-3. 5. 0.]
 print(solve(L,U,B))   

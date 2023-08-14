@@ -1,6 +1,6 @@
 import numpy as np
 
-def Simpson(
+def simpson(
         f: np.vectorize,
         a: float,
         b: float,
@@ -62,5 +62,5 @@ a = 0
 b = 2
 n = 100
 
-print(Simpson(f, a, b, n))
+print(simpson(f, a, b, n))
 print((b**3)/3)
