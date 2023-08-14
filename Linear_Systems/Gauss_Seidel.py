@@ -12,7 +12,7 @@ def Gauss_Seidel(
         x: np.ndarray | list[int | float] = None,
         tolerance: float = 1e-6,
         max_iter: int = 1000
-        ) -> np.ndarray:
+    ) -> np.ndarray:
     
     """
     Gauss-Seidel method to solve a linear system Ax = B.

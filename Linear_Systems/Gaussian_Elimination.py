@@ -3,7 +3,7 @@ import numpy as np
 def Gaussian(
         A: np.ndarray | list[list[int | float]],
         B: np.ndarray | list[int | float] | list[list[int | float]]
-        ) -> tuple[np.ndarray, np.ndarray]:
+    ) -> tuple[np.ndarray, np.ndarray]:
     
     """
     Gaussian elimination to solve a linear system Ax = B.

@@ -2,7 +2,7 @@ import numpy as np
 
 def LU(
         A: np.ndarray | list[list[int | float]]
-        ) -> np.ndarray:
+    ) -> np.ndarray:
     
     """
     LU decomposition to solve a linear system Ax = B.
